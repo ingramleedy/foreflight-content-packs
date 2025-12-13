@@ -7,23 +7,59 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            line-height: 1.6;
+            background-color: #f4f6f9;
             color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(to bottom, #1e3a8a, #1e40af);
+            color: white;
         }
         h1 {
-            text-align: center;
-            color: #2c3e50;
+            margin: 0;
+            font-size: 2.5em;
         }
-        h2 {
-            color: #2980b9;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 10px;
+        p.subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
         }
-        .pack {
-            margin-bottom: 40px;
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 20px;
+        }
+        .card h2 {
+            margin: 0 0 10px;
+            font-size: 1.4em;
+            color: #1e40af;
+        }
+        .card p {
+            margin: 0 0 20px;
+            color: #555;
         }
         .download {
             display: inline-block;
@@ -31,8 +67,8 @@
             color: white;
             padding: 10px 20px;
             text-decoration: none;
-            border-radius: 5px;
-            margin-top: 10px;
+            border-radius: 6px;
+            font-weight: bold;
         }
         .download:hover {
             background: #2980b9;
@@ -40,6 +76,7 @@
         footer {
             text-align: center;
             margin-top: 60px;
+            padding: 20px;
             color: #777;
             font-size: 0.9em;
         }
@@ -47,47 +84,71 @@
 </head>
 <body>
 
-    <h1>Ingram Leedy's ForeFlight Content Packs</h1>
-    <p style="text-align: center;">Community-created custom content packs for ForeFlight, sourced from <a href="https://github.com/ingramleedy">github.com/ingramleedy</a>.</p>
+    <header>
+        <h1>Ingram Leedy's ForeFlight Content Packs</h1>
+        <p class="subtitle">Community-created custom content packs for ForeFlight<br>Sourced from <a href="https://github.com/ingramleedy" style="color: #a0d8ff;">github.com/ingramleedy</a></p>
+    </header>
 
-    <div class="pack">
-        <h2>Airport Restaurants</h2>
-        <p>ForeFlight Content Pack for Airport Restaurants in the US.</p>
-        <a href="https://github.com/ingramleedy/Airport_Restaurants" class="download">View on GitHub →</a>
-    </div>
+    <div class="grid">
 
-    <div class="pack">
-        <h2>Cross-Border Flying</h2>
-        <p>ForeFlight Content Packs for cross-border general aviation flights: US Customs and Border Protection (CBP) southern ports of entry, Bahamas customs ports, and resources for Canada/Mexico.</p>
-        <a href="https://github.com/ingramleedy/CrossBorderFlyingFFContentPack" class="download">View on GitHub →</a>
-    </div>
+        <div class="card">
+            <img src="https://flyingmag1.b-cdn.net/wp-content/uploads/sites/2/2021/08/httpswww.flyingmag.comsitesflyingmag.comfilesimages201904burger-flights-map-1.jpg" alt="Airport Restaurants map with waypoints">
+            <div class="card-content">
+                <h2>Airport Restaurants</h2>
+                <p>ForeFlight Content Pack featuring airport restaurants across the US – perfect for $100 hamburger runs!</p>
+                <a href="https://github.com/ingramleedy/Airport_Restaurants" class="download">View on GitHub →</a>
+            </div>
+        </div>
 
-    <div class="pack">
-        <h2>Colorado Mountain Passes</h2>
-        <p>A custom ForeFlight content pack featuring detailed maps, waypoints, and information for Colorado's key mountain passes.</p>
-        <a href="https://github.com/ingramleedy/ColoradoMountainPassesFFContentPack" class="download">View on GitHub →</a>
-    </div>
+        <div class="card">
+            <img src="https://d32dgjuo8qzfhk.cloudfront.net/assets/ffm-overview-maps-vfrifr.jpg" alt="ForeFlight map with international layers">
+            <div class="card-content">
+                <h2>Cross-Border Flying</h2>
+                <p>Resources and waypoints for cross-border general aviation: US CBP ports, Bahamas customs, Canada/Mexico procedures.</p>
+                <a href="https://github.com/ingramleedy/Cross-Border-Flying" class="download">View on GitHub →</a>
+            </div>
+        </div>
 
-    <div class="pack">
-        <h2>New York Hudson Scenic</h2>
-        <p>Scenic waypoints and layers for the New York Hudson River area.</p>
-        <a href="https://github.com/ingramleedy/NewYorkHudsonFFContentPack" class="download">View on GitHub →</a>
-    </div>
+        <div class="card">
+            <img src="https://txtav.com/-/media/textron-aviation/images/content-pieces/articles/mountain-flying-in-colorado/berthoud-pass.jpg?la=en&h=1440&w=1920&hash=DFFFB97A621E7596485E574BA036B6AB" alt="Aircraft flying over Colorado Rocky Mountains">
+            <div class="card-content">
+                <h2>Colorado Mountain Passes</h2>
+                <p>Custom content pack with detailed maps, waypoints, and info for flying Colorado's challenging mountain passes.</p>
+                <a href="https://github.com/ingramleedy/ColoradoMountainPassesFFContentPack" class="download">View on GitHub →</a>
+            </div>
+        </div>
 
-    <div class="pack">
-        <h2>Timezones of the World</h2>
-        <p>Global timezones as a ForeFlight content pack.</p>
-        <a href="https://github.com/ingramleedy/TimezonesFFContentPack" class="download">View on GitHub →</a>
-    </div>
+        <div class="card">
+            <img src="https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=10160026634255962" alt="Aircraft flying along Hudson River with NYC skyline">
+            <div class="card-content">
+                <h2>New York Hudson Scenic</h2>
+                <p>Scenic waypoints and layers for the famous Hudson River flight corridor around New York City.</p>
+                <a href="https://github.com/ingramleedy/New-York-Scenic-Content-Pack-for-ForeFlight" class="download">View on GitHub →</a>
+            </div>
+        </div>
 
-    <div class="pack">
-        <h2>Diamond Aircraft Service Centers</h2>
-        <p>Locations of Diamond Aircraft Authorized Service Centers (factory-trained with parts, tools, and expertise for service/warranty repair) – available as a ForeFlight content pack.</p>
-        <a href="https://github.com/ingramleedy/Diamond-Aircraft-Service-Centers" class="download">View on GitHub →</a>
+        <div class="card">
+            <img src="https://support.foreflight.com/hc/article_attachments/27284062219287" alt="Global aeronautical map with layers">
+            <div class="card-content">
+                <h2>Timezones of the World</h2>
+                <p>Global timezones displayed as a ForeFlight layer – essential for international flight planning.</p>
+                <a href="https://github.com/ingramleedy/TimezonesFFContentPack" class="download">View on GitHub →</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://www.diamondaircraft.com/fileadmin/diamondaircraft/service-and-support/Bildschirmfoto_2018-12-04_um_09.46.56.png" alt="Map of Diamond Aircraft service centers">
+            <div class="card-content">
+                <h2>Diamond Aircraft Service Centers</h2>
+                <p>Locations of authorized Diamond Aircraft service centers worldwide (factory-trained maintenance).</p>
+                <a href="https://github.com/ingramleedy/Diamond-Aircraft-Service-Centers" class="download">View on GitHub →</a>
+            </div>
+        </div>
+
     </div>
 
     <footer>
-        These packs are maintained by Ingram Leedy on GitHub. Visit each repository for the latest files, README instructions on how to import into ForeFlight, and any previews.
+        All packs maintained by Ingram Leedy on GitHub. Visit each repository for the latest files, import instructions, and previews.
     </footer>
 
 </body>
