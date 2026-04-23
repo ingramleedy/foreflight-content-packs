@@ -39,6 +39,8 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             overflow: hidden;
             transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
         }
         .card:hover {
             transform: translateY(-10px);
@@ -51,6 +53,9 @@
         }
         .card-content {
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
         }
         .card h2 {
             margin: 0 0 10px;
@@ -60,17 +65,31 @@
         .card p {
             margin: 0 0 20px;
             color: #555;
+            flex: 1;
         }
-        .download {
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .btn {
             display: inline-block;
-            background: #3498db;
-            color: white;
             padding: 10px 20px;
             text-decoration: none;
             border-radius: 6px;
             font-weight: bold;
+            color: white;
         }
-        .download:hover {
+        .btn-download {
+            background: #22c55e;
+        }
+        .btn-download:hover {
+            background: #16a34a;
+        }
+        .btn-github {
+            background: #3498db;
+        }
+        .btn-github:hover {
             background: #2980b9;
         }
         footer {
@@ -80,14 +99,31 @@
             color: #777;
             font-size: 0.9em;
         }
+        .install-note {
+            max-width: 1140px;
+            margin: 20px auto 0;
+            padding: 16px 24px;
+            background: #eef2ff;
+            border-left: 4px solid #1e40af;
+            border-radius: 6px;
+            color: #1e293b;
+            font-size: 0.95em;
+        }
+        .install-note strong {
+            color: #1e40af;
+        }
     </style>
 </head>
 <body>
 
     <header>
         <h1>ForeFlight Content Packs</h1>
-        <p class="subtitle">Community-created custom content packs for ForeFlight<br>Sourced from <a href="https://github.com/ingramleedy" style="color: #a0d8ff;">github.com/ingramleedy</a></p>
+        <p class="subtitle">Community-created custom content packs for ForeFlight<br>Source: <a href="https://github.com/ingramleedy/ForeFlightContentPacks" style="color: #a0d8ff;">github.com/ingramleedy/ForeFlightContentPacks</a></p>
     </header>
+
+    <div class="install-note">
+        <strong>How to install:</strong> Open this page in Safari on your iPad, tap a green <em>Download .zip</em> button, then choose <em>Open in ForeFlight</em>. ForeFlight will install the pack. Enable it under <em>More → Content Packs</em>, then toggle the layers on the map.
+    </div>
 
     <div class="grid">
 
@@ -96,7 +132,10 @@
             <div class="card-content">
                 <h2>Airport Restaurants</h2>
                 <p>ForeFlight Content Pack featuring airport restaurants across the US – perfect for $100 hamburger runs!</p>
-                <a href="https://github.com/ingramleedy/Airport_Restaurants" class="download">View on GitHub →</a>
+                <div class="actions">
+                    <a href="https://github.com/ingramleedy/ForeFlightContentPacks/blob/main/Airport_Restaurants/Airport_Restaurants_Pack.zip?raw=true" class="btn btn-download">Download .zip</a>
+                    <a href="https://github.com/ingramleedy/ForeFlightContentPacks/tree/main/Airport_Restaurants" class="btn btn-github">View on GitHub →</a>
+                </div>
             </div>
         </div>
 
@@ -105,7 +144,10 @@
             <div class="card-content">
                 <h2>Cross-Border Flying</h2>
                 <p>Resources and waypoints for cross-border general aviation: US CBP ports, Bahamas customs, Canada/Mexico procedures.</p>
-                <a href="https://github.com/ingramleedy/Cross-Border-Flying" class="download">View on GitHub →</a>
+                <div class="actions">
+                    <a href="https://github.com/ingramleedy/ForeFlightContentPacks/blob/main/Cross_Border_Flying/Cross_Border_Flying_Pack.zip?raw=true" class="btn btn-download">Download .zip</a>
+                    <a href="https://github.com/ingramleedy/ForeFlightContentPacks/tree/main/Cross_Border_Flying" class="btn btn-github">View on GitHub →</a>
+                </div>
             </div>
         </div>
 
@@ -114,7 +156,10 @@
             <div class="card-content">
                 <h2>Colorado Mountain Passes</h2>
                 <p>Custom content pack with detailed maps, waypoints, and info for flying Colorado's challenging mountain passes.</p>
-                <a href="https://github.com/ingramleedy/ColoradoMountainPassesFFContentPack" class="download">View on GitHub →</a>
+                <div class="actions">
+                    <a href="https://github.com/ingramleedy/ForeFlightContentPacks/blob/main/Colorado_Mountain_Passes/Colorado_Mountain_Passes_Pack.zip?raw=true" class="btn btn-download">Download .zip</a>
+                    <a href="https://github.com/ingramleedy/ForeFlightContentPacks/tree/main/Colorado_Mountain_Passes" class="btn btn-github">View on GitHub →</a>
+                </div>
             </div>
         </div>
 
@@ -123,7 +168,10 @@
             <div class="card-content">
                 <h2>New York Hudson Scenic</h2>
                 <p>Scenic waypoints and layers for the famous Hudson River flight corridor around New York City.</p>
-                <a href="https://github.com/ingramleedy/New-York-Scenic-Content-Pack-for-ForeFlight" class="download">View on GitHub →</a>
+                <div class="actions">
+                    <a href="https://github.com/ingramleedy/ForeFlightContentPacks/blob/main/New_York_Scenic/New_York_Scenic_Pack.zip?raw=true" class="btn btn-download">Download .zip</a>
+                    <a href="https://github.com/ingramleedy/ForeFlightContentPacks/tree/main/New_York_Scenic" class="btn btn-github">View on GitHub →</a>
+                </div>
             </div>
         </div>
 
@@ -132,7 +180,10 @@
             <div class="card-content">
                 <h2>Timezones of the World</h2>
                 <p>Global timezones displayed as a ForeFlight layer – essential for international flight planning.</p>
-                <a href="https://github.com/ingramleedy/TimezonesFFContentPack" class="download">View on GitHub →</a>
+                <div class="actions">
+                    <a href="https://github.com/ingramleedy/ForeFlightContentPacks/blob/main/Timezones/Timezones_Pack.zip?raw=true" class="btn btn-download">Download .zip</a>
+                    <a href="https://github.com/ingramleedy/ForeFlightContentPacks/tree/main/Timezones" class="btn btn-github">View on GitHub →</a>
+                </div>
             </div>
         </div>
 
@@ -141,16 +192,22 @@
             <div class="card-content">
                 <h2>Diamond Aircraft Service Centers</h2>
                 <p>Locations of authorized Diamond Aircraft service centers worldwide (factory-trained maintenance).</p>
-                <a href="https://github.com/ingramleedy/Diamond-Aircraft-Service-Centers" class="download">View on GitHub →</a>
+                <div class="actions">
+                    <a href="https://github.com/ingramleedy/ForeFlightContentPacks/blob/main/Diamond_Service_Centers/Diamond_Service_Centers_Pack.zip?raw=true" class="btn btn-download">Download .zip</a>
+                    <a href="https://github.com/ingramleedy/ForeFlightContentPacks/tree/main/Diamond_Service_Centers" class="btn btn-github">View on GitHub →</a>
+                </div>
             </div>
         </div>
 
         <div class="card">
             <img src="https://support.foreflight.com/hc/article_attachments/27894952952983" alt="ForeFlight map displaying airspace boundaries and sectors">
             <div class="card-content">
-                <h2>FAA Facilities & Airspace Sectors</h2>
-                <p>Custom ForeFlight overlays for FAA districts, all 22 ARTCC sectors (high/low altitude), TRACON areas, and key facilities – for better airspace awareness and flight planning.</p>
-                <a href="https://github.com/ingramleedy/FAAFacilitiesFFContentPack" class="download">View on GitHub →</a>
+                <h2>FAA Facilities &amp; Airspace Sectors</h2>
+                <p>Custom ForeFlight overlays for FAA districts, all 22 ARTCC sectors (high/low altitude), TRACON areas, and key facilities – for better airspace awareness and flight planning. (~101 MB)</p>
+                <div class="actions">
+                    <a href="https://github.com/ingramleedy/ForeFlightContentPacks/blob/main/FAA_Facilities/FAA_Facilities_Pack.zip?raw=true" class="btn btn-download">Download .zip</a>
+                    <a href="https://github.com/ingramleedy/ForeFlightContentPacks/tree/main/FAA_Facilities" class="btn btn-github">View on GitHub →</a>
+                </div>
             </div>
         </div>
 
@@ -159,7 +216,10 @@
             <div class="card-content">
                 <h2>Indian Reservations</h2>
                 <p>All 312 U.S. federal Indian reservations as toggleable zones plus a separate tappable pin layer. Popups include nearest airports, documented tribal overflight assertions, and demographics; PDFs cover AC 91-36D, NPATMA, and the 2025 Red Lake / Smedsmo incident.</p>
-                <a href="https://github.com/ingramleedy/ForeFlightContentPacks/tree/main/Indian_Reservations" class="download">View on GitHub →</a>
+                <div class="actions">
+                    <a href="https://github.com/ingramleedy/ForeFlightContentPacks/blob/main/Indian_Reservations/Indian_Reservations_Pack.zip?raw=true" class="btn btn-download">Download .zip</a>
+                    <a href="https://github.com/ingramleedy/ForeFlightContentPacks/tree/main/Indian_Reservations" class="btn btn-github">View on GitHub →</a>
+                </div>
             </div>
         </div>
 
@@ -167,24 +227,28 @@
             <img src="https://support.foreflight.com/hc/article_attachments/27894952952983" alt="FAA Minimum Vectoring Altitude (MVA) and Minimum IFR Altitude (MIA) Charts as KML Files">
             <div class="card-content">
                 <h2>FAA Minimum Vectoring Altitude (MVA) and Minimum IFR Altitude (MIA) Charts as KML Files</h2>
-                <p>Content pack includes all charts from the same ATC TRACON facility of a given type (MVA or MIA), and its name includes the map type and the three-characters identifier of each facility.</p>
-                <a href="https://github.com/dark/faa-mva-kml" class="download">View on GitHub →</a>
+                <p>Content pack includes all charts from the same ATC TRACON facility of a given type (MVA or MIA), and its name includes the map type and the three-characters identifier of each facility. <em>(External project — not maintained here.)</em></p>
+                <div class="actions">
+                    <a href="https://github.com/dark/faa-mva-kml" class="btn btn-github">View on GitHub →</a>
+                </div>
             </div>
         </div>
 
         <div class="card">
-            <img src="https://i0.wp.com/flyingadventuresandmore.blog/wp-content/uploads/2018/12/2019-03-27-17-15-34.jpg?resize=736%2C514&ssl=1" alt="USA Package">
+            <img src="https://i0.wp.com/flyingadventuresandmore.blog/wp-content/uploads/2018/12/2019-03-27-17-15-34.jpg?resize=736%2C514&amp;ssl=1" alt="USA Package">
             <div class="card-content">
-                <h2>USA Package - landmarks, national parks, monuments, more</h2>
-                <p>USA has so many beautiful places to fly. This package contains a lot of landmarks plus all national parks, national monuments, national shores and more.</p>
-                <a href=https://flyingadventuresandmore.blog/foreflight/" class="download">View site →</a>
+                <h2>USA Package — landmarks, national parks, monuments, more</h2>
+                <p>USA has so many beautiful places to fly. This package contains a lot of landmarks plus all national parks, national monuments, national shores and more. <em>(External project — not maintained here.)</em></p>
+                <div class="actions">
+                    <a href="https://flyingadventuresandmore.blog/foreflight/" class="btn btn-github">View site →</a>
+                </div>
             </div>
         </div>
 
     </div>
 
     <footer>
-        All packs maintained by Ingram Leedy on GitHub. Visit each repository for the latest files, import instructions, and previews.
+        All first-party packs are maintained by Ingram Leedy in the <a href="https://github.com/ingramleedy/ForeFlightContentPacks">ForeFlightContentPacks</a> monorepo. Visit each subfolder for the latest files, import instructions, and previews.
     </footer>
 
 </body>
