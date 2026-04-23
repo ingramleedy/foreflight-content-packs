@@ -112,6 +112,20 @@
         .install-note strong {
             color: #1e40af;
         }
+        .section-heading {
+            max-width: 1200px;
+            margin: 60px auto 8px;
+            padding: 0 20px;
+            color: #1e40af;
+            font-size: 1.8em;
+        }
+        .section-sub {
+            max-width: 1200px;
+            margin: 0 auto 20px;
+            padding: 0 20px;
+            color: #555;
+            font-size: 1em;
+        }
     </style>
 </head>
 <body>
@@ -135,6 +149,19 @@
                 <div class="actions">
                     <a href="https://github.com/ingramleedy/ForeFlightContentPacks/blob/main/Airport_Restaurants/Airport_Restaurants_Pack.zip?raw=true" class="btn btn-download">Download .zip</a>
                     <a href="https://github.com/ingramleedy/ForeFlightContentPacks/tree/main/Airport_Restaurants" class="btn btn-github">View on GitHub →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <!-- TODO: replace placeholder with a DDD photo/logo. -->
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Diners, Drive-Ins and Dives restaurants across the US" style="background: linear-gradient(135deg, #dc2626, #f59e0b);">
+            <div class="card-content">
+                <h2>Diners, Drive-Ins and Dives</h2>
+                <p>1,000+ <em>DDD</em> restaurant locations scraped from the Food Network A–Z listing and geocoded into a ForeFlight KML overlay. Tap a pin for name, address, phone, and description. <em>(Custom Map Overlay — import via iOS share sheet → Open in ForeFlight, then enable under Maps → Map Elements → Custom Map Overlays.)</em></p>
+                <div class="actions">
+                    <a href="https://github.com/ingramleedy/ForeFlightDinersDriveInsDives/blob/main/output/DDD_Restaurants.kml?raw=true" class="btn btn-download">Download .kml</a>
+                    <a href="https://github.com/ingramleedy/ForeFlightDinersDriveInsDives" class="btn btn-github">View on GitHub →</a>
                 </div>
             </div>
         </div>
@@ -247,8 +274,49 @@
 
     </div>
 
+    <h2 class="section-heading">Related projects</h2>
+    <p class="section-sub">Other pilot tools I've built (or helped build) that pair well with ForeFlight. Not content packs — standalone apps and utilities.</p>
+
+    <div class="grid">
+
+        <div class="card">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="FlightStreamX" style="background: linear-gradient(135deg, #1e40af, #06b6d4);">
+            <div class="card-content">
+                <h2>FlightStreamX</h2>
+                <p>iOS app that wirelessly transmits the active ForeFlight (or Garmin Pilot) flight plan to X-Plane over local Wi-Fi. Auto-discovers X-Plane on the network, converts the plan to FMS 1100 format, and loads it into the sim — no manual file transfer. By Flying Dragons. $8.99.</p>
+                <div class="actions">
+                    <a href="https://apps.apple.com/us/app/flightstreamx/id6759071019" class="btn btn-github">View on App Store →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="SkySkew" style="background: linear-gradient(135deg, #0f172a, #475569);">
+            <div class="card-content">
+                <h2>SkySkew</h2>
+                <p>iOS aviation-weather app that turns Skew-T diagrams into plain-English route insights for turbulence, icing, and winds aloft. AI-assisted interpretation, route-specific atmospheric data, iPad-optimized. By Flying Dragons. 14-day free trial, then $2.99/month or $29.99/year.</p>
+                <div class="actions">
+                    <a href="https://apps.apple.com/us/app/skyskew/id6741827720" class="btn btn-github">View on App Store →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="AIRAC Cycle Calendar Generator" style="background: linear-gradient(135deg, #059669, #0891b2);">
+            <div class="card-content">
+                <h2>AIRAC Cycle Calendar Generator</h2>
+                <p>Free web tool + API that generates an iCalendar (<code>.ics</code>) of every AIRAC effective date so your Garmin / ForeFlight / Navigraph / Jeppesen database updates never sneak up on you. Optional 7- or 14-day reminder events. Background on the <a href="https://www.diamondaviators.net/forum/viewtopic.php?t=10041">Diamond Aviators forum</a>.</p>
+                <div class="actions">
+                    <a href="https://airac.flyingdragons.world/api/airac" class="btn btn-download">Get .ics</a>
+                    <a href="https://github.com/ingramleedy/AIRAC" class="btn btn-github">View on GitHub →</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
     <footer>
-        All first-party packs are maintained by Ingram Leedy in the <a href="https://github.com/ingramleedy/ForeFlightContentPacks">ForeFlightContentPacks</a> monorepo. Visit each subfolder for the latest files, import instructions, and previews.
+        First-party packs are maintained by Ingram Leedy in the <a href="https://github.com/ingramleedy/ForeFlightContentPacks">ForeFlightContentPacks</a> monorepo. Visit each subfolder for the latest files, import instructions, and previews. Related apps are by <a href="https://www.flyingdragons.world/">Flying Dragons</a>.
     </footer>
 
 </body>
